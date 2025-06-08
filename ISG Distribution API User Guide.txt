@@ -1,0 +1,208 @@
+# ISG Distribution API - User Guide
+
+## Quick Start
+
+### Access the Dashboard
+1. **URL:** Your Cloudflare Pages URL (will be provided)
+2. **Password:** `isg2025!` 
+3. **You'll see:** API status and partnership overview
+
+---
+
+## Adding a New Brand Partner
+
+### Step 1: Get Brand's Information
+**From the brand, you need:**
+- Their Shopify store URL (ends with `.myshopify.com`)
+- Their private app API token (starts with `shpat_`)
+
+### Step 2: Create Partnership
+1. Click **"Add Partnership"** button
+2. Fill in the form:
+   - **Partnership Name:** Something descriptive (e.g., "Sun God Medicinals Partnership")
+   - **Brand's Shopify Store:** `their-store.myshopify.com`
+   - **Brand's API Token:** `shpat_xxxxxxxx`
+   - **Your store info:** Pre-filled automatically
+   - **Distribution Fee:** 15-25% (what you keep from each sale)
+   - **Inventory Buffer:** 100% (show all their inventory)
+
+3. Click **"Create Partnership"**
+
+### Step 3: Test Connection
+- Once created, click **"Test Connection"** on the partnership card
+- Should show green checkmarks for both stores
+
+---
+
+## Syncing Products
+
+### Step 1: Select Products
+1. Click **"View Products"** on any partnership
+2. **Browse their products** - see prices, inventory, variants
+3. **Check the boxes** for products you want in your store
+4. Click **"Save Selection & Sync"**
+
+### Step 2: Verify in Shopify
+1. Go to your Shopify admin → Products
+2. **Look for products** with `-distributed` in the handle
+3. **Check pricing and inventory** looks correct
+
+### Step 3: Manual Sync (When Needed)
+- Click **"Sync Now"** to update inventory/pricing
+- Do this weekly or when you know they've updated stock
+
+---
+
+## What Happens When You Sync
+
+### Products Get:
+- ✅ **Added to your store** with `-distributed` handles
+- ✅ **Pricing maintained** (their MSRP)
+- ✅ **Inventory shown** (100% of their stock)
+- ✅ **Brand links removed** from descriptions
+- ✅ **Your distribution fee calculated** in product metafields
+
+### Revenue Split Example:
+- **Product Price:** $100
+- **Your Cut (20%):** $20  
+- **Brand Payout (80%):** $80
+
+---
+
+## Dashboard Overview
+
+### Stats Section
+- **Active Partnerships:** Number of brand partners
+- **Products Distributed:** Total products in your store
+- **Est. Monthly Revenue:** Revenue projection
+- **Last Sync:** When products were last updated
+
+### Partnership Cards Show:
+- **Products:** How many products selected
+- **Est. Revenue:** Monthly revenue estimate  
+- **Your Cut:** Distribution fee percentage
+- **Status:** Synced or pending
+
+---
+
+## Managing Products
+
+### Adding Products:
+1. **"View Products"** on partnership
+2. **Check boxes** for products you want
+3. **"Save Selection & Sync"**
+
+### Removing Products:
+**⚠️ Known Issue:** Product removal not working yet
+**Workaround:** Manually delete products with `-distributed` handles from Shopify admin
+
+---
+
+## Troubleshooting
+
+### "API Offline" Message
+- **Check internet connection**
+- **Refresh the page**
+- **Contact ISG support** if persists
+
+### Partnership Creation Fails
+- **Verify store URLs** (must end with `.myshopify.com`)
+- **Check API tokens** (should start with `shpat_`)
+- **Make sure brand's private app has all permissions**
+
+### Products Don't Appear in Shopify
+- **Check "View Products"** - were any selected?
+- **Look for `-distributed` handles** in Shopify admin
+- **Try "Sync Now"** button again
+
+### No Products Available
+- **Brand may have no published products**
+- **Check their store is active**
+- **Verify their API token permissions**
+
+---
+
+## Brand Setup Requirements
+
+### For New Partners, Send Them:
+
+**"Please create a private app in your Shopify admin with these steps:**
+
+1. **Go to:** Settings → Apps and sales channels → Develop apps
+2. **Click:** "Create an app" 
+3. **Name it:** "ISG Distribution Integration"
+4. **Give it these permissions:**
+   - ✅ read_products
+   - ✅ write_products  
+   - ✅ read_orders
+   - ✅ write_orders
+   - ✅ read_inventory
+   - ✅ write_inventory
+5. **Install the app**
+6. **Copy the API token** (starts with shpat_)
+7. **Send us:** Your store URL + API token"
+
+---
+
+## Best Practices
+
+### Weekly Routine:
+1. **Check dashboard** for partnership status
+2. **Sync active partnerships** to update inventory
+3. **Review new products** from brands
+4. **Monitor revenue metrics**
+
+### When Adding Products:
+- **Start with bestsellers** from each brand
+- **Check profit margins** meet your targets
+- **Verify product compliance** with your store policies
+- **Test customer demand** before adding full catalog
+
+### Product Management:
+- **Use descriptive partnership names** for easy identification
+- **Monitor inventory levels** to prevent overselling
+- **Remove discontinued products** manually via Shopify admin
+- **Coordinate with brands** on pricing changes
+
+---
+
+## Known Issues (To Fix Later)
+
+### Product Removal:
+- **Issue:** Unchecking products doesn't remove them from store
+- **Workaround:** Delete products manually in Shopify admin
+- **Fix:** Planned for next update
+
+### Checkbox Persistence:
+- **Issue:** Selected products don't stay checked in "View Products"
+- **Impact:** Cosmetic only, doesn't affect functionality
+- **Fix:** Planned for next update
+
+---
+
+## Support
+
+### For Technical Issues:
+- **Check this guide first**
+- **Look at dashboard error messages**
+- **Contact ISG development team**
+
+### For Business Questions:
+- **Partnership terms and agreements**
+- **Revenue split negotiations** 
+- **Product selection strategy**
+- **Contact ISG business team**
+
+---
+
+## Security Notes
+
+- **Keep API tokens secure** - don't share publicly
+- **Use dashboard password** - `isg2025!`
+- **Log out when done** on shared computers
+- **Change password periodically** (contact ISG dev team)
+
+---
+
+*Last Updated: June 2025*  
+*ISG Distribution API v1.0*
